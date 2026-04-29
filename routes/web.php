@@ -34,3 +34,41 @@ Route::post('/formulir/proses', [PegawaiController::class,'proses']);
 Route::get('/blog', [BlogController::class, 'home']);
 Route::get('/blog/tentang', [BlogController::class, 'tentang']);
 Route::get('/blog/kontak', [BlogController::class, 'kontak']);
+
+// route pertemuan 1-6
+Route::get('nrp', function () {
+    return view('5026241035');
+});
+
+Route::get('contoh', function () {
+    return view('contoh');
+});
+
+Route::get('intro', function () {
+    return view('intro');
+});
+
+Route::get('news', function () {
+    return view('news');
+});
+
+Route::get('news1', function () {
+    return view('news1');
+});
+
+Route::get('responsive', function () {
+    return view('responsive');
+});
+
+Route::get('index', function () {
+    return view('index');
+});
+
+Route::get('linktree', function () {
+    return view('linktree');
+});
+
+// route menu
+Route::get('menu', function () {
+    return view('menu');
+});
