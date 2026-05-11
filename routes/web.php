@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
-
+use App\Http\Controllers\PegawaiDBController;
 
 
 Route::get('/', function () {
@@ -34,6 +34,9 @@ Route::post('/formulir/proses', [PegawaiController::class,'proses']);
 Route::get('/blog', [BlogController::class, 'home']);
 Route::get('/blog/tentang', [BlogController::class, 'tentang']);
 Route::get('/blog/kontak', [BlogController::class, 'kontak']);
+
+//crud tabel pegawai
+Route::get('/pegawai', [PegawaiDBController::class, 'index']);
 
 // route pertemuan 1-6
 Route::get('nrp', function () {
