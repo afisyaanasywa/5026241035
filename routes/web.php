@@ -5,6 +5,7 @@ use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\NilaiKuliahController;
 
 
 Route::get('/', function () {
@@ -82,3 +83,8 @@ Route::get('linktree', function () {
 Route::get('menu', function () {
     return view('menu');
 });
+
+// route latihan eas
+Route::get('/nilaikuliah', [NilaiKuliahController::class, 'index']);
+Route::get('/nilaikuliah/tambah', [NilaiKuliahController::class, 'create']);
+Route::post('/nilaikuliah/simpan', [NilaiKuliahController::class, 'store']);
