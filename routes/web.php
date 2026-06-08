@@ -6,6 +6,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\NilaiKuliahController;
+use App\Http\Controllers\KeranjangBelanjaController;
 
 
 Route::get('/', function () {
@@ -88,3 +89,9 @@ Route::get('menu', function () {
 Route::get('/nilaikuliah', [NilaiKuliahController::class, 'index']);
 Route::get('/nilaikuliah/tambah', [NilaiKuliahController::class, 'create']);
 Route::post('/nilaikuliah/simpan', [NilaiKuliahController::class, 'store']);
+
+// CRUD Tabel Keranjang Belanja
+Route::get('/keranjangbelanja', [KeranjangBelanjaController::class, 'index']);
+Route::get('/keranjangbelanja/beli', [KeranjangBelanjaController::class, 'create']);
+Route::post('/keranjangbelanja/simpan', [KeranjangBelanjaController::class, 'store']);
+Route::get('/keranjangbelanja/batal/{id}', [KeranjangBelanjaController::class, 'destroy']);
