@@ -8,6 +8,7 @@ use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\NilaiKuliahController;
 use App\Http\Controllers\KeranjangBelanjaController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\BajuController;
 
 
 Route::get('/', function () {
@@ -104,3 +105,12 @@ Route::post('/siswa', [SiswaController::class, 'store'])->name('siswa.store');
 Route::get('/siswa/{nrp}/edit', [SiswaController::class, 'edit'])->name('siswa.edit');
 Route::put('/siswa/{nrp}', [SiswaController::class, 'update'])->name('siswa.update');
 Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');
+
+// route baju
+Route::get('/baju', [BajuController::class, 'index']);
+Route::get('/baju/cari', [BajuController::class, 'cari']);
+Route::get('/baju/tambah', [BajuController::class, 'tambah']);
+Route::post('/baju/simpan', [BajuController::class, 'store']);
+Route::get('/baju/edit/{id}', [BajuController::class, 'edit']);
+Route::post('/baju/update', [BajuController::class, 'update']);
+Route::get('/baju/hapus/{id}', [BajuController::class, 'hapus']);

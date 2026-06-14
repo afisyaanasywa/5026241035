@@ -32,6 +32,9 @@
                         <a class="nav-link" href="/keranjangbelanja">Keranjang Belanja</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="/baju">Tugas Pra EAS (Baju)</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#">EAS</a>
                     </li>
                 </ul>
