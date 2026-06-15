@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class BajuController extends Controller
 {
-    public function index()
+   public function index()
     {
         $baju = DB::table('baju')->get();
         return view('baju', compact('baju'));

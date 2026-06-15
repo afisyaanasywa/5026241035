@@ -9,6 +9,7 @@ use App\Http\Controllers\NilaiKuliahController;
 use App\Http\Controllers\KeranjangBelanjaController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\BajuController;
+use App\Http\Controllers\TagihanAirController;
 
 
 Route::get('/', function () {
@@ -114,3 +115,8 @@ Route::post('/baju/simpan', [BajuController::class, 'store']);
 Route::get('/baju/edit/{id}', [BajuController::class, 'edit']);
 Route::post('/baju/update', [BajuController::class, 'update']);
 Route::get('/baju/hapus/{id}', [BajuController::class, 'hapus']);
+
+// route eas tagihan air
+Route::get('/eas', [TagihanAirController::class, 'index']);
+Route::get('/eas/tambah', [TagihanAirController::class, 'create']);
+Route::post('/eas/simpan', [TagihanAirController::class, 'store']);
