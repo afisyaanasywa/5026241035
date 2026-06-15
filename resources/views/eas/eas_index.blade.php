@@ -29,7 +29,7 @@
             <tr>
                 <td>{{ $item->ID }}</td>
                 <td>{{ $item->NoMeteran }}</td>
-                <td>{{ $item->PenggunaanAir }}</td>
+                <td>{{ $item->Penggunaan }}</td>
                 <td>{{ $item->TotalTagihan }}</td>
             </tr>
             @empty
